@@ -28,15 +28,13 @@ class CommentBox extends Component {
   handleCommentSubmit(comment) {
     let comments = this.state.data;
     comment.id = Date.now();
-    let newComments = comments.concat([comment]);
-    this.setState({ data: newComments });
     $.ajax({
       method: 'POST',
       url: this.props.url,
       data: comment
     })
     .then(err => {
-      console.error(err);
+      console.log('this is the error',err);
       this.setState({ data: comments });
     });
   }
