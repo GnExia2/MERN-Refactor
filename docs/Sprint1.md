@@ -8,8 +8,26 @@ Let's go ahead and create some components!
 
 <details>
   <summary>Build a React container component called <code>CommentBox</code> that renders a <code>CommentList</code> and a <code>CommentForm</code>. Your component should have a <code>state</code> attribute called <code>data</code> (which should just be an empty array). You should pass daata into the <code>CommentList</code> as a <code>prop</code> called <code>data</code> </summary>
-  
 
+
+
+  - models
+    - comment.js
+  - node_modules
+    - ...various modules...
+  - src
+    - Comment.js
+    - CommentBox.js
+    - CommentForm.js
+    - CommentList.js
+    - index.js
+    - style.js
+  - .gitignore
+  - data.js
+  - index.html
+  - package.json
+  - README.md
+  - server.js
 
 
 ```js
@@ -46,7 +64,7 @@ export default CommentBox;
 
 <details>
   <summary> This React component should be capable of rendering mulitple <code>Comment</code> components. To make this list of components use <a href="http://jasonjl.me/blog/2015/04/18/rendering-list-of-elements-in-react-with-jsx/">JavaScript's map function like in this article.</a> The style of the code in the sample below is slightly different than in the article. Both are acceptable syntax. </summary>
-  
+
 
 ```js
 //CommentList.js
@@ -82,10 +100,10 @@ export default CommentList;
 
 <details>
   <summary> This should be able to take in the basic information about a comment (author and text) in props and render them on the page.
-  
+
   </summary>
-  
-  
+
+
   ```js
 //Comment.js
 import React, { Component } from 'react';
@@ -118,7 +136,7 @@ export default Comment;
 
 <details>
   <summary> This component, <code>CommentForm</code> should be a form capable of handling changes in the form fields so that the state of the component changes. The state should start as <code>this.state = { author: '', text: '' }</code>
-    
+
   </summary>
 
 ```js
